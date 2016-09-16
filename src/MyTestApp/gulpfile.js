@@ -49,7 +49,7 @@ gulp.task("lib", function () {
 });
 
 gulp.task('copy', function () {
-    gulp.src('./app/**/*.js')
+    gulp.src('./scripts/**/*.js')
         .pipe(gulp.dest(paths.webroot + '/appScripts'));
 });
 
@@ -58,5 +58,5 @@ gulp.task('default', ['lib', 'copy'], function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./app/**/*.*', ['copy']);
+    gulp.watch('./scripts/**/*.*', ['copy']);
 });
